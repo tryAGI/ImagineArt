@@ -21,6 +21,32 @@ namespace ImagineArt
         /// Text to PNG API<br/>
         /// Generate a transparent-background PNG image from a text prompt.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::ImagineArt.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::System.IO.Stream> GenerateTransparentImageAsStreamAsync(
+
+            global::ImagineArt.GenerateTransparentImageRequest request,
+            global::ImagineArt.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Text to PNG API<br/>
+        /// Generate a transparent-background PNG image from a text prompt.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::ImagineArt.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::ImagineArt.AutoSDKHttpResponse<byte[]>> GenerateTransparentImageAsResponseAsync(
+
+            global::ImagineArt.GenerateTransparentImageRequest request,
+            global::ImagineArt.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Text to PNG API<br/>
+        /// Generate a transparent-background PNG image from a text prompt.
+        /// </summary>
         /// <param name="prompt">
         /// Text description of the transparent PNG image to generate.<br/>
         /// Example: A sleek futuristic car with glowing LED lights
