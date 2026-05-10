@@ -73,5 +73,6 @@ namespace ImagineArt
         public GenerateTransparentImageRequest()
         {
         }
+
     }
 }
