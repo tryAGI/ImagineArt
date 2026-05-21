@@ -90,5 +90,6 @@ namespace ImagineArt
         public ErrorResponse()
         {
         }
+
     }
 }
