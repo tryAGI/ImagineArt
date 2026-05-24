@@ -385,18 +385,17 @@ namespace ImagineArt
                                     __exception_400 = __ex;
                                 }
 
-                                throw new global::ImagineArt.ApiException<global::ImagineArt.ErrorResponse>(
+
+                                throw global::ImagineArt.ApiException<global::ImagineArt.ErrorResponse>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_400,
-                                    ResponseObject = __value_400,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_400,
+                                    responseObject: __value_400,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Error response.
                             if ((int)__response.StatusCode == 500)
@@ -423,18 +422,17 @@ namespace ImagineArt
                                     __exception_500 = __ex;
                                 }
 
-                                throw new global::ImagineArt.ApiException<global::ImagineArt.ErrorResponse>(
+
+                                throw global::ImagineArt.ApiException<global::ImagineArt.ErrorResponse>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_500 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_500,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_500,
-                                    ResponseObject = __value_500,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_500,
+                                    responseObject: __value_500,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Error response.
                             if ((int)__response.StatusCode == 503)
@@ -461,18 +459,17 @@ namespace ImagineArt
                                     __exception_503 = __ex;
                                 }
 
-                                throw new global::ImagineArt.ApiException<global::ImagineArt.ErrorResponse>(
+
+                                throw global::ImagineArt.ApiException<global::ImagineArt.ErrorResponse>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_503 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_503,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_503,
-                                    ResponseObject = __value_503,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_503,
+                                    responseObject: __value_503,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
 
                             try
@@ -502,17 +499,15 @@ namespace ImagineArt
                                 {
                                 }
 
-                                throw new global::ImagineArt.ApiException(
+                                throw global::ImagineArt.ApiException.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __ex,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
 
                 }
@@ -848,18 +843,17 @@ namespace ImagineArt
                                     __exception_400 = __ex;
                                 }
 
-                                throw new global::ImagineArt.ApiException<global::ImagineArt.ErrorResponse>(
+
+                                throw global::ImagineArt.ApiException<global::ImagineArt.ErrorResponse>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_400,
-                                    ResponseObject = __value_400,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_400,
+                                    responseObject: __value_400,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Error response.
                             if ((int)__response.StatusCode == 500)
@@ -886,18 +880,17 @@ namespace ImagineArt
                                     __exception_500 = __ex;
                                 }
 
-                                throw new global::ImagineArt.ApiException<global::ImagineArt.ErrorResponse>(
+
+                                throw global::ImagineArt.ApiException<global::ImagineArt.ErrorResponse>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_500 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_500,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_500,
-                                    ResponseObject = __value_500,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_500,
+                                    responseObject: __value_500,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Error response.
                             if ((int)__response.StatusCode == 503)
@@ -924,18 +917,17 @@ namespace ImagineArt
                                     __exception_503 = __ex;
                                 }
 
-                                throw new global::ImagineArt.ApiException<global::ImagineArt.ErrorResponse>(
+
+                                throw global::ImagineArt.ApiException<global::ImagineArt.ErrorResponse>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_503 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_503,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_503,
-                                    ResponseObject = __value_503,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_503,
+                                    responseObject: __value_503,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
 
                             if (__effectiveReadResponseAsString)
@@ -963,16 +955,15 @@ namespace ImagineArt
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    throw new global::ImagineArt.ApiException(
+                                    throw global::ImagineArt.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: null,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
                             else
@@ -1007,17 +998,15 @@ namespace ImagineArt
                                     {
                                     }
 
-                                    throw new global::ImagineArt.ApiException(
+                                    throw global::ImagineArt.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
 
