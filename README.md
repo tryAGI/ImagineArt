@@ -40,6 +40,13 @@ using ImagineArt;
 using var client = new ImagineArtClient(apiKey);
 ```
 
+### CLI
+
+```bash
+dotnet tool install --global ImagineArt.CLI --prerelease
+imagine-art api --help
+```
+
 <!-- EXAMPLES:START -->
 ### Generate image
 Generate an image with ImagineArt.

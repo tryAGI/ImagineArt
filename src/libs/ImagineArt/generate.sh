@@ -16,3 +16,20 @@ autosdk generate openapi.yaml \
   --output Generated \
   --security-scheme Http:Header:Bearer \
   --exclude-deprecated-operations
+
+rm -rf ../../cli/ImagineArt.CLI
+
+autosdk cli-project openapi.yaml \
+  --output ../../cli/ImagineArt.CLI \
+  --sdk-project ../../libs/ImagineArt/ImagineArt.csproj \
+  --targetFramework net10.0 \
+  --namespace ImagineArt \
+  --clientClassName ImagineArtClient \
+  --package-id ImagineArt.CLI \
+  --tool-command-name imagine-art \
+  --user-secrets-id ImagineArt.CLI \
+  --api-key-env-var IMAGINEART_API_KEY \
+  --base-url-env-var IMAGINEART_BASE_URL \
+  --cli-credential-file \
+  --exclude-deprecated-operations \
+  --security-scheme Http:Header:Bearer
