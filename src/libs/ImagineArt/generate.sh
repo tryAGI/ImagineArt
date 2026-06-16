@@ -1,13 +1,17 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+install_autosdk_cli() {
+  dotnet tool update --global autosdk.cli --prerelease >/dev/null 2>&1 || \
+    dotnet tool install --global autosdk.cli --prerelease
+}
+
 # Manual OpenAPI source based on the official ImagineArt Apidog docs:
 # - https://reference.imagine.art/api-10672910.md
 # - https://reference.imagine.art/api-11959030.md
 # - https://reference.imagine.art/api-10690786.md
 # - https://reference.imagine.art/api-10695409.md
-
-dotnet tool install --global autosdk.cli --prerelease
+install_autosdk_cli
 rm -rf Generated
 autosdk generate openapi.yaml \
   --namespace ImagineArt \
