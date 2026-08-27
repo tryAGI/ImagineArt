@@ -4,7 +4,7 @@
 namespace ImagineArt
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ImageFileRequest
     {

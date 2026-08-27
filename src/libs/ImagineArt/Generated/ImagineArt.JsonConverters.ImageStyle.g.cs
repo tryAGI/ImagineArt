@@ -20,7 +20,7 @@ namespace ImagineArt.JsonConverters
                     {
                         return global::ImagineArt.ImageStyleExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

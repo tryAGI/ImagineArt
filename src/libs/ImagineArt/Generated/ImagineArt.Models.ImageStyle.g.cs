@@ -10,31 +10,31 @@ namespace ImagineArt
     public enum ImageStyle
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Anime,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FluxDev,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FluxDevFast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FluxSchnell,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImagineTurbo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Realistic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sdxl10,
     }
