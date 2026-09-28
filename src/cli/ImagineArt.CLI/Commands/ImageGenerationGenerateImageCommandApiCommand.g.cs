@@ -49,6 +49,8 @@ internal static partial class ImageGenerationGenerateImageCommandApiCommand
           Hidden = true,
       };
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"generate-image", @"Text to Image API
@@ -98,6 +100,7 @@ Generate an image from a text prompt and ImagineArt style.");
 
                                 await CliRuntime.WriteBinaryAsync(parseResult, response, cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }

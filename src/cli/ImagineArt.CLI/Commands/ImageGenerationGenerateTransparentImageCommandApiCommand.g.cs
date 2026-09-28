@@ -42,6 +42,8 @@ internal static partial class ImageGenerationGenerateTransparentImageCommandApiC
           Hidden = true,
       };
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"generate-transparent-image", @"Text to PNG API
@@ -88,6 +90,7 @@ Generate a transparent-background PNG image from a text prompt.");
 
                                 await CliRuntime.WriteBinaryAsync(parseResult, response, cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }
