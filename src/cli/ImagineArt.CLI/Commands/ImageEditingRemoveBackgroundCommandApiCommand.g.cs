@@ -15,6 +15,8 @@ internal static partial class ImageEditingRemoveBackgroundCommandApiCommand
     };
     private static readonly ImageFileRequestOptionSet ImageFileRequestOptionSetOptions = ImageFileRequestOptionSet.Create();
 
+    static partial void CustomizeCommand(ref Command command);
+
     public static Command Create()
     {
         var command = new Command(@"remove-background", @"Background Remover API
@@ -36,6 +38,7 @@ Remove the background from an uploaded image.");
 
                                 await CliRuntime.WriteBinaryAsync(parseResult, response, cancellationToken).ConfigureAwait(false);
             }, cancellationToken).ConfigureAwait(false));
+        CustomizeCommand(ref command);
         return command;
     }
 }
