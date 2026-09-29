@@ -17,9 +17,9 @@ internal static partial class ImageEditingUpscaleImageCommandApiCommand
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"upscale-image", @"Image Upscale API
+        var command = new Command(commandName ?? @"upscale-image", @"Image Upscale API
 Upscale an uploaded image.");
                         command.Options.Add(Image);                        command.Options.Add(ImageFileRequestOptionSetOptions.Imagename);
 
