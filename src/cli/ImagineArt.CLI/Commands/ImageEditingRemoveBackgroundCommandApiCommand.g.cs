@@ -17,9 +17,9 @@ internal static partial class ImageEditingRemoveBackgroundCommandApiCommand
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"remove-background", @"Background Remover API
+        var command = new Command(commandName ?? @"remove-background", @"Background Remover API
 Remove the background from an uploaded image.");
                         command.Options.Add(Image);                        command.Options.Add(ImageFileRequestOptionSetOptions.Imagename);
 

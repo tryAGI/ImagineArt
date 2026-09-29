@@ -44,9 +44,9 @@ internal static partial class ImageGenerationGenerateTransparentImageCommandApiC
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"generate-transparent-image", @"Text to PNG API
+        var command = new Command(commandName ?? @"generate-transparent-image", @"Text to PNG API
 Generate a transparent-background PNG image from a text prompt.");
                         command.Options.Add(Prompt);
                         command.Options.Add(AspectRatio);

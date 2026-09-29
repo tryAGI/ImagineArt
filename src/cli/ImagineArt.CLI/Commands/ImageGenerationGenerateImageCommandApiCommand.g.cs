@@ -51,9 +51,9 @@ internal static partial class ImageGenerationGenerateImageCommandApiCommand
 
     static partial void CustomizeCommand(ref Command command);
 
-    public static Command Create()
+    public static Command Create(string? commandName = null)
     {
-        var command = new Command(@"generate-image", @"Text to Image API
+        var command = new Command(commandName ?? @"generate-image", @"Text to Image API
 Generate an image from a text prompt and ImagineArt style.");
                         command.Options.Add(Prompt);
                         command.Options.Add(Style);
