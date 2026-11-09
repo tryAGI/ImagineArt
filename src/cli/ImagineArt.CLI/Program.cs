@@ -13,5 +13,6 @@ rootCommand.Options.Add(CliOptions.OutputDirectory);
 rootCommand.Subcommands.Add(AuthCommand.Create());
 rootCommand.Subcommands.Add(ImageEditingApiGroupCommand.Create());
 rootCommand.Subcommands.Add(ImageGenerationApiGroupCommand.Create());
+rootCommand.Subcommands.Add(CliCompletion.CreateCommand(rootCommand, @"imagine-art"));
 
 return await rootCommand.Parse(args).InvokeAsync().ConfigureAwait(false);
