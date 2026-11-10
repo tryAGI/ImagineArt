@@ -18,7 +18,7 @@ namespace ImagineArt.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::ImagineArt.AspectRatioExtensions.ToEnum(stringValue) ?? default;
+                        return global::ImagineArt.AspectRatioExtensions.ToEnum(stringValue) ?? throw new global::System.Text.Json.JsonException($"Unknown value '{stringValue}' for global::ImagineArt.AspectRatio.");
                     }
 
                     break;
